@@ -1,5 +1,8 @@
 @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap');
 
+:root{
+   --color-dark: #161616;
+}
 *{
    margin: 0;
    padding: 0;
@@ -9,21 +12,23 @@ body{
 }
 main{
    display: flex;
-   justify-content: center;
+   flex-direction: column;
+   align-items: center;
 }
 .container{
    width: 1200px;
 }
 
-/* banner */
-.banner{
+.banner, .blog{
    margin: 50px 0;
 }
+
+/* banner */
 .banner-content{
    display: flex;
    padding: 0 100px;
    color: #ffffff;
-   background-color: #161616;
+   background-color: var(--color-dark);
    border-radius: 30px;
 }
 .banner-text{
@@ -58,4 +63,101 @@ main{
 }
 .banner-img img{
    height: 100%;
+}
+/* banner */
+
+/* blog */
+.blog-content{
+   display: grid;
+   grid-template-columns: 24% 74%;
+   align-items: start;
+   column-gap: 20px;
+}
+.nav-btns{
+   padding: 1px 15px;
+   background-color: var(--color-dark);
+   border-radius: 10px;
+}
+.nav-btns a{
+   display: block;
+   margin: 15px 0;
+   padding: 17px 39px;
+   background-color: #ffffff;
+   font-size: 20px;
+   font-weight: 500;
+   color: var(--color-dark);
+   text-align: center;
+   text-decoration: none;
+   border-radius: 10px;
+}
+
+.all-blogs{
+   display: grid;
+   grid-template-columns: repeat(3,1fr);
+   gap: 20px;
+}
+
+.single-blog{
+   border: 1px solid #E8E8E8;
+   border-radius: 10px;
+}
+.single-blog img{
+   width: 100%;
+}
+
+.blog-info{
+   padding: 15px;
+}
+.blog-info p:first-child{
+   display: inline-block;
+   margin-bottom: 15px;
+   padding: 4px 16px;
+   font-weight: 500;
+   border: 1px solid var(--color-dark);
+   border-radius: 5px;
+}
+.blog-info h3{
+   margin-bottom: 15px;
+   font-size: 17px;
+   font-weight: 500;
+}
+.duration-comments, .duration, .comments{
+   display: flex;
+}
+.duration, .comments{
+   margin-right: 30px;
+}
+.duration img, .comments img{
+   margin-right: 10px;
+}
+/* blog */
+
+/* footer */
+footer{
+   margin-top: 50px;
+   padding: 100px;
+   background-color: var(--color-dark);
+   color: #ffffff;
+   text-align: center;
+}
+footer .container{
+   margin: 0 auto;
+}
+.footer-text h2{
+   margin-bottom: 50px;
+   font-size: 40px;
+   font-weight: 600;
+}
+hr{
+   border-color: rgba(255, 255, 255, 0.1);
+}
+.footer-nav{
+   display: flex;
+   justify-content: center;
+   margin-top: 50px;
+}
+.footer-nav a{
+   margin: 0 20px;
+   color: #B9B9B9;
+   text-decoration: none;
 }
