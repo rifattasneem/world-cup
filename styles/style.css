@@ -2,6 +2,7 @@
 
 :root{
    --color-dark: #161616;
+   --color-red: #DD0000;
 }
 *{
    margin: 0;
@@ -19,9 +20,26 @@ main{
    width: 1200px;
 }
 
-.banner, .blog{
+/* common section attributes */
+.banner, .blog, .upcoming-matchs, .groups{
    margin: 50px 0;
 }
+.all-blogs, .all-matches{
+   display: grid;
+   grid-template-columns: repeat(3,1fr);
+   gap: 20px;
+}
+.single-blog, .single-match, .single-group{
+   border: 1px solid #E8E8E8;
+   border-radius: 10px;
+}
+.blog-content, .up-content, .group-content{
+   display: grid;
+   grid-template-columns: 24% 74%;
+   align-items: start;
+   column-gap: 20px;
+}
+/* common section attributes */
 
 /* banner */
 .banner-content{
@@ -47,7 +65,7 @@ main{
 }
 .banner-text a{
    padding: 16px 25px;
-   background-color: #DD0000;
+   background-color: var(--color-red);
    color: #ffffff;
    text-decoration: none;
    border-radius: 5px;
@@ -66,19 +84,13 @@ main{
 }
 /* banner */
 
-/* blog */
-.blog-content{
-   display: grid;
-   grid-template-columns: 24% 74%;
-   align-items: start;
-   column-gap: 20px;
-}
-.nav-btns{
+/* side nav */
+.side-nav{
    padding: 1px 15px;
    background-color: var(--color-dark);
    border-radius: 10px;
 }
-.nav-btns a{
+.side-nav a{
    display: block;
    margin: 15px 0;
    padding: 17px 39px;
@@ -89,18 +101,15 @@ main{
    text-align: center;
    text-decoration: none;
    border-radius: 10px;
+   transition: all 0.3s ease;
 }
+.side-nav a:hover, .active{
+   background-color: var(--color-red);
+   color: #ffffff;
+}
+/* side nav */
 
-.all-blogs{
-   display: grid;
-   grid-template-columns: repeat(3,1fr);
-   gap: 20px;
-}
-
-.single-blog{
-   border: 1px solid #E8E8E8;
-   border-radius: 10px;
-}
+/* blog */
 .single-blog img{
    width: 100%;
 }
@@ -130,7 +139,53 @@ main{
 .duration img, .comments img{
    margin-right: 10px;
 }
+.duration p, .comments p{
+   color: rgba(22, 22, 22, 0.7);
+}
 /* blog */
+
+/* groups */
+.all-groups{
+   display: grid;
+   grid-template-columns: repeat(4,1fr);
+   gap: 20px;
+}
+.single-group{
+   padding: 20px;
+}
+.single-group h2{
+   padding-bottom: 5px;
+   border-bottom: 1px solid var(--color-dark);
+}
+.teams p{
+   margin-top: 5px;
+}
+/* groups */
+
+/* upcoming match */
+.single-match{
+   padding: 50px 10px;
+   text-align: center;
+}
+.flags{
+   display: flex;
+   justify-content: center;
+   align-items: center;
+}
+.flags img{
+   margin: 0 20px;
+}
+.flags p{
+   font-size: 17px;
+   font-weight: 700;
+}
+.match-info h3{
+   margin: 15px 0 7px;
+}
+.match-info p{
+   color: #4D4D4D;
+}
+/* upcoming match */
 
 /* footer */
 footer{
@@ -161,3 +216,4 @@ hr{
    color: #B9B9B9;
    text-decoration: none;
 }
+/* footer */
