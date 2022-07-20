@@ -44,6 +44,9 @@
    }
    .banner-content p{
       margin-bottom: 35px;
+      white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
    }
    .banner-img {
       width: 100%;
@@ -80,7 +83,7 @@
 
    /* groups */
    .all-groups{
-      grid-template-columns: repeat(1,1fr);
+      grid-template-columns: repeat(2,1fr);
    }
    /* groups */
 
